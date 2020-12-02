@@ -14,3 +14,4 @@ Solutions to the following problems can be found:
 
 [b2s]: https://github.com/afiodorov/bit_manipulation/tree/master/binary_to_string.go
 [flip]: https://github.com/afiodorov/bit_manipulation/tree/master/flip_bit_to_win.go
+[next]: https://github.com/afiodorov/bit_manipulation/tree/master/next_number.go
