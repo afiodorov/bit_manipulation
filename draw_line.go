@@ -1,12 +1,7 @@
 package main
 
 func mask(start, end int) byte {
-	var mask byte
-	for i := start; i < end; i++ {
-		mask |= (1 << (7 - i))
-	}
-
-	return mask
+	return (byte(0xFF) >> start) & (byte(0xFF) << (8 - end))
 }
 
 func drawLine(screen []byte, width, x1, x2, y int) error {
