@@ -71,11 +71,38 @@ func TestDrawLine(t *testing.T) {
 00000000
 00111000
 00000000`)},
+		{screen: []byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00},
+			width: 16,
+			x1:    2,
+			x2:    14,
+			y:     1,
+			expected: strings.TrimSpace(`
+0000000000000000
+0011111111111110
+0000000000000000`)},
 	} {
 		drawLine(tc.screen, tc.width, tc.x1, tc.x2, tc.y)
 		actual := renderScreen(tc.screen, tc.width)
 		if tc.expected != actual {
 			t.Fatalf("Got:\n%v\nExpected:\n%v", actual, tc.expected)
 		}
+	}
+}
+
+func TestMask(t *testing.T) {
+	if fmt.Sprintf("%08b", mask(0, 8)) != "11111111" {
+		t.Fail()
+	}
+
+	if fmt.Sprintf("%08b", mask(0, 7)) != "11111110" {
+		t.Fail()
+	}
+
+	if fmt.Sprintf("%08b", mask(1, 7)) != "01111110" {
+		t.Fail()
+	}
+
+	if fmt.Sprintf("%08b", mask(2, 7)) != "00111110" {
+		t.Fail()
 	}
 }

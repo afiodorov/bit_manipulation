@@ -11,9 +11,11 @@ Solutions to the following problems can be found:
 * [5.3 Flip Bit to Win][flip] I save positions of each 0. Then walk through such array.
 * [5.4 Next Number][next] Solution closely resembles the one outlined in the book. What's "novel" from is that I test entire range of `uint16` against a naive solution just to make sure I got this one right.
 * [5.7 Pairwise Swap][swap] Solution works for signed integers; again entire range of int16 is tested.
+* [5.8 Draw Line][draw] Solution careful applies the correct mask to the applicable bytes.
 
 
 [b2s]: https://github.com/afiodorov/bit_manipulation/tree/master/binary_to_string.go
 [flip]: https://github.com/afiodorov/bit_manipulation/tree/master/flip_bit_to_win.go
 [next]: https://github.com/afiodorov/bit_manipulation/tree/master/next_number.go
 [swap]: https://github.com/afiodorov/bit_manipulation/tree/master/pairwise_swap.go
+[draw]: https://github.com/afiodorov/bit_manipulation/tree/master/draw_line.go
